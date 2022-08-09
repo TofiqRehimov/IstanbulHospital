@@ -1,0 +1,90 @@
+@import "~mdb-ui-kit/css/mdb.min.css";
+
+
+.header-tel ul {
+  list-style: none;
+}
+.navbar {
+  height: 85px;
+  cursor: pointer;
+}
+
+/* .navbar-nav .nav-link  span::before{
+  position: absolute;
+  bottom: 25px;
+  opacity: 0;
+  content: "";
+  display: block;
+  left: 52%;
+  transition: all ease 0.3s;
+  transform: translateX(-50%);
+  height: 1px;
+  background: #000;
+  width: 0;
+} */
+.nav-link span:hover .nav-link span::before{
+    opacity: 1;
+    width: 100%;
+}
+.inner {
+  display: none;
+  background-color: white;
+  position: absolute;
+  width: auto;
+  z-index: 2;
+  padding: 10px 10px;
+}
+.inner,
+.inner ul li {
+  list-style: none;
+}
+.nav-active {
+  position: relative;
+}
+.nav-active:hover .inner {
+  display: block;
+}
+.inner ul li {
+  list-style: none;
+  margin: 9px 0;
+  font-size: 16px;
+}
+.inner ul li a::after{
+  /* position: absolute; */
+    transition: all ease 0.4s;
+    display: block;
+    content: "";
+    border-bottom: 1px solid #555;
+    width: 0;
+    left: 0;
+    transform: translateY(-50%);
+}
+.nav-link,
+.inner ul li a:hover::after {
+  width: 50%;
+}
+  /* .nav-link:hover::before {
+    color: orange !important;
+    max-width: 100%;
+  } */
+.nav-link {
+  position: relative;
+  color: white;
+  display: block;
+  white-space: nowrap;
+  font-weight: 600;
+}
+.nav-link::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  max-width: 0;
+  border-bottom: 2px solid #f76a51;
+  color: #f76a51;
+  content: attr(data-hover);
+  -webkit-transition: max-width 0.5s;
+  -moz-transition: max-width 0.5s;
+  transition: max-width 0.5s;
+  text-shadow: 0 0 #2c2c2c;
+}

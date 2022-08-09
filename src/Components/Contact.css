@@ -1,0 +1,34 @@
+.Contact {
+  background-color: orange;
+}
+.Language {
+  background-color: orange;
+  color: white;
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.Language:hover {
+  background-color: orange;
+  color: black;
+}
+.dropdown-item:hover .Language {
+  background-color: black !important;
+  color: white;
+}
+.dropdown {
+  right: 0;
+}
+.header-tel,
+.Language,
+section a,
+.dropdown-item {
+  font-size: 14px;
+}
+.header-tel ul li,
+section i{
+    color: white;
+}
+section i:hover{
+    color: black;
+}

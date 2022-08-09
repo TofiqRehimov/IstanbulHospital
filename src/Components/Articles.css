@@ -1,0 +1,43 @@
+
+
+.myArticles {
+    height: 290px;
+    padding: 0;
+}
+
+.myArticles::before{
+    background-color: black;
+}
+
+.article-img{
+    position: absolute;
+    z-index: -100;
+}
+.article{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 0;
+    text-align: center;
+    background: rgba(39, 39, 39, 0.85);
+    cursor: pointer;
+}
+.article:hover{
+    opacity: 1;
+    transition: 0.8s;
+}
+.article p, h6{
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 57px;
+}
+.article p{
+    padding: 0px 10px;
+}
+
+.articles img{
+    height: 400px;
+    object-fit: cover;
+}

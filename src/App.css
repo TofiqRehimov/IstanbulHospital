@@ -1,0 +1,12 @@
+body{
+    font-family: ETmodules!important;
+}
+
+@media screen and (max-width: 414px) {
+    .navbar {
+        height: auto;
+    }
+    .input-group{
+        width: 100% !important;
+    }
+  }
