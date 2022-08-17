@@ -1,34 +1,45 @@
 .Contact {
-  background-color: orange;
+  background-color:  #ff3300;
 }
-.Language {
-  background-color: orange;
-  color: white;
+.headerInfo {
+  height: 40px;
+}
+.Language p{
+  color: #f5f8fa;
   display: inline-block;
-  margin-top: 10px;
   margin-left: 10px;
+  font-size: 13px;
+  cursor: pointer;
 }
-.Language:hover {
-  background-color: orange;
-  color: black;
-}
-.dropdown-item:hover .Language {
-  background-color: black !important;
-  color: white;
-}
-.dropdown {
-  right: 0;
+
+
+
+.header-tel ul {
+  list-style: none;
+  display: flex;
+  margin-top: 3px;
 }
 .header-tel,
 .Language,
 section a,
 .dropdown-item {
-  font-size: 14px;
+  font-size: 16px;
 }
-.header-tel ul li,
-section i{
-    color: white;
+.header-tel ul li span{
+    color: #f5f8fa;
+    padding: 0.5rem;
 }
-section i:hover{
-    color: black;
+.header-tel:nth-child(1){
+  color: #fff; 
+  text-decoration: none;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+}
+.sosials-icons{
+  color: #f5f8fa;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 5px;
+
 }

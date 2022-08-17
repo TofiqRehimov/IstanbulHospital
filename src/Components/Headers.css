@@ -1,12 +1,17 @@
 @import "~mdb-ui-kit/css/mdb.min.css";
 
 
-.header-tel ul {
-  list-style: none;
+
+.Logo{
+  width: 80px;
+  height: 80px;
+  margin: 10px;
 }
 .navbar {
   height: 85px;
   cursor: pointer;
+  box-shadow: 0 2px 15px #1d120f;
+  padding: 15px 0;
 }
 
 /* .navbar-nav .nav-link  span::before{
@@ -87,4 +92,7 @@
   -moz-transition: max-width 0.5s;
   transition: max-width 0.5s;
   text-shadow: 0 0 #2c2c2c;
+}
+.search{
+  margin-left: 5px;
 }

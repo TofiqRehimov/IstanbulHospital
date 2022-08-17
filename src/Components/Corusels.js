@@ -9,7 +9,7 @@ import img from '../img/niye-biz-esas-sehife.jpg';
 const Corusels = () => {
 
   return (
-    <div className="">
+    <div className="" data-aos="zoom-in" data-aos-duration="1500" >
 
 
 

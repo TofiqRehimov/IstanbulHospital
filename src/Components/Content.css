@@ -2,12 +2,7 @@
 .headerinfo{
     font-size: 12px;
 }
-.header-tel ul{
-    /* display: flex; */
-}
-.header-tel ul li{
 
-}
 .content-list{
     padding-left: 0;
     list-style-type: none;
@@ -34,11 +29,12 @@
     display: block;
     margin-top: 16px;
     margin-bottom: 7px;
-    font-size: 17px;
-    font-weight: 400;
+    font-size: 20px;
+    font-weight: 800;
+    color: #25d366;
 }
 .content-list p{
-    color: #6d7a8c;
+    color: #128c7e;
     line-height: 1.8;
     margin-bottom: 12px;
     font-size: 16.5px;

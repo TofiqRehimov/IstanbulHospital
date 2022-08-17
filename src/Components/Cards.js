@@ -5,7 +5,7 @@ const Cards = () => {
         <div className='container mt-3'>
             <div className='row'>
                 <div className='col-md-12 '>
-                    <h2 > Bolmelerimiz</h2>
+                    <h2 > Bölmələrimiz</h2>
                 </div>
                 <div className='col-md-4 mt-4 ' data-aos="zoom-in-right" data-aos-duration="1000">
 

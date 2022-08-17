@@ -1,3 +1,7 @@
 footer{
-    background-color: orange;
+    background-color:  #ff3300;
+}
+footer p{
+    color: #f5f8fa;
+    font-size: 16px;
 }

@@ -7,7 +7,7 @@ const DoctorSlide = () => {
         <div className='container'>
           <div className='row'>
               <div className='col-md-12 mt-4 mb-2'>
-                  <h2> Hekimer </h2>
+                  <h2> Həkimlər </h2>
               </div>
               <div className='col-md-3 ' data-aos="zoom-in" data-aos-duration="1000">
               <div className="card mb-3" >

@@ -1,16 +1,26 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import './Headers.css';
-
+import Logo from "../img/LOGO.png"
+import { BsSearch } from "react-icons/bs";
 const Header = () => {
+  const [state,setState] = useState('');
+
+  // const searchChange =(event)=>{
+  //     setState(event.target.value)
+  //     console.log("Click olundu")
+  // }
+  // const handleClick =(e)=>{
+  //   e.preventDefalut()
+  // }
   return (
-    <div className=''>
+    <div className='Header' data-aos="fade-down" data-aos-duration="1000">
 
       <nav className="navbar navbar-expand-lg navbar-light mt-0">
 
-        <div className="container-fluid">
-          <img></img>
-          <Link to='/' className="navbar-brand" href="#"> <h1 >Istanbul Hospital</h1>  </Link>
+        <div className="container">
+        <img src={Logo} className="card-img-top float-right Logo" alt="Sunset Over the Sea" />
+          <Link to='/' className="navbar-brand" > <h1 >Istanbul Hospital</h1>  </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -75,7 +85,7 @@ const Header = () => {
                         <Link to='/Laboratoriya' className='nav-link' >Laboratoriya </Link>
                       </li>
                       <li>
-                        <Link to='/USM_Reqamsal Rentgen' className='nav-link' >USM/ Reqamsal Rentgen </Link>
+                        <Link to='/USM_Reqamsal Rentgen' className='nav-link' >USM/ RƏqamsal Rentgen </Link>
                       </li>
                       <li>
                         <Link to='/Spirometriya' className='nav-link' >Spirometriya </Link>
@@ -92,36 +102,24 @@ const Header = () => {
                   </div>
                 </li>
                 <li className='nav-item' data-aos="fade-right" data-aos-duration="1000">
-                  <Link to='/Hekimlerimiz' className='nav-link'> <span>  Hekimlerimiz </span>  </Link> 
+                  <Link to='/Hekimlerimiz' className='nav-link'> <span>  Həkimlrimiz </span>  </Link> 
                   </li>
                 <li className='nav-item' data-aos="fade-right" data-aos-duration="1000">
-                  <Link to='/Meqaleler' className='nav-link'> <span>  Meqaleler </span> </Link>  
+                  <Link to='/Meqaleler' className='nav-link'> <span>  Məqalələr </span> </Link>  
+                  </li>
+                  <li className='nav-item' data-aos="fade-right" data-aos-duration="1000">
+                  <Link to='/Qebula_yazilmaq' className='nav-link'> <span>  Qəbula yazılmaq </span> </Link>  
+                  </li>
+                  <li className='nav-item' data-aos="fade-right" data-aos-duration="1000">
+                  <Link to='/Kompaniya' className='nav-link'> <span>  Kompaniya </span> </Link>  
                   </li>
                 <li className='nav-item' data-aos="fade-right" data-aos-duration="1000">
-                  <Link to='/Elaqe' className='nav-link'> <span>   Elaqe </span> </Link> 
+                  <Link to='/Elaqe' className='nav-link'> <span>   Əlaqe </span> </Link> 
                 </li>
               </ul>
-
-
-
-
-
-
-
             </div>
+            <BsSearch className='search' />
           </div>
-          <form className="d-flex input-group w-auto">
-            <input
-              type="search"
-              className="form-control rounded"
-              placeholder="Search"
-              aria-label="Search"
-              aria-describedby="search-addon"
-            />
-            <span className="input-group-text border-0" id="search-addon">
-              <i className="fas fa-search"></i>
-            </span>
-          </form>
         </div>
       </nav>
     </div>

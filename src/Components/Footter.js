@@ -10,8 +10,8 @@ const Footter = () => {
         </div>
       
         <div className="text-center text-dark p-3" >
-          © 2022: Istanbul  Hospital<br></br>
-          <a class="text-dark" href="https://mdbootstrap.com/"> Butun huquqlar qorunur</a>
+        <p>© 2022: Istanbul  Hospital<br></br>
+           Butun huquqlar qorunur</p>
         </div>
     
       </footer>

@@ -1,0 +1,62 @@
+input[type=text], select,option{
+    border: 1px solid #d8d8d8;
+    outline: none;
+    padding: 10px 11px 9px 16px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    position: relative;
+    height: 100%;
+    align-items: center;
+  }
+  input[type=date] {
+    border: 1px solid #d8d8d8;
+    outline: none;
+    padding: 10px 11px 9px 16px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    position: relative;
+    /* height: 100%; */
+    align-items: center;
+  }
+  input[type=time] {
+    border: 1px solid #d8d8d8;
+    outline: none;
+    padding: 10px 11px 9px 16px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    position: relative;
+    /* height: 100%; */
+    align-items: center;
+  }
+  input[type=submit] {
+    border: 1px solid #0000;
+    outline: none;
+    padding: 5px  16px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    position: relative;
+    /* height: 100%; */
+    align-items: center;
+    margin-top: 10px;
+    background-color: green;
+    color: #fff;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #ff3300;
+    color: #fff;
+  }
+  .reseption img{
+    width: 80%;
+    height: 500px;
+    border-radius: 10px;
+  }
+  /* div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  } */

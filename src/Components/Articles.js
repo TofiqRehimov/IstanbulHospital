@@ -10,7 +10,7 @@ const Articles = () => {
     return (
         <div className='container'>
             <div className='col-lg-12 mt-3 mb-3'>
-                <h2> Meqaleler</h2>
+                <h2> Məqalələr</h2>
             </div>
             <Swiper
                 slidesPerView={3}

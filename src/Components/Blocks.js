@@ -6,7 +6,7 @@ const Blocks = () => {
         <div className='container mt-3'>
             <div className='row'>
                 <div className='col-md-12 '>
-                    <h2 > Heqaleler</h2>
+                    <h2 > Məqalələr</h2>
                 </div>
                 <div className='col-md-4 mt-4'>
                     <div className="card " data-aos="fade-up" data-aos-duration="1000"
@@ -17,7 +17,7 @@ const Blocks = () => {
                         </div>
                         <Link to='/Meqaleler/Meqale' className=''>
                             <div className=''>
-                                <span> Etrafli </span>
+                                <span> Ətrafli </span>
                             </div>
                         </Link>
                     </div>
