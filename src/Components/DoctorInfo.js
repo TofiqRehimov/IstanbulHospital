@@ -13,7 +13,7 @@ const DoctorInfo = () => {
                         <img
                             src={img}
                             alt="Trendy Pants and Shoes"
-                            className=""
+                            className="new"
                         />
                     </div>  
                     </div>
