@@ -1,0 +1,9 @@
+.DepartamentsInfoImg{
+    height: 500px;
+}
+.DepartamentsInfo p{
+    align-items: center;
+}
+.DepartamentsInfo ul li{
+    font-size: 30px;
+}

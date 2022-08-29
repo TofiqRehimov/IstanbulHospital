@@ -19,8 +19,9 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg navbar-light mt-0">
 
         <div className="container">
+        <Link to='/' className="navbar-brand" > 
         <img src={Logo} className="card-img-top float-right Logo" alt="Sunset Over the Sea" />
-          <Link to='/' className="navbar-brand" > <h1 >Istanbul Hospital</h1>  </Link>
+         <h1 >Istanbul Hospital</h1>  </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -36,13 +37,10 @@ const Header = () => {
             <div className="navbar-nav w-100">
               <ul className='navbar-nav mx-auto'>
                 <li className='nav-item' data-aos="fade-right" data-aos-duration="1000">
-                  <Link to='/' className="nav-link active" aria-current="page"><span>  Home </span></Link>
-                </li>
-                <li className='nav-item' data-aos="fade-right" data-aos-duration="1000">
                   <Link to='/Haqqimizda' className='nav-link'> <span>  Haqqımızda </span> </Link> 
                   </li>
                 <li className='nav-item nav-active' data-aos="fade-right" data-aos-duration="1000">
-                  <Link to='/Bolmelerimiz' className='nav-link  '> Bolmelerimiz </Link>
+                  <Link to='/Bolmelerimiz' className='nav-link  '>  Bölmələrimiz </Link>
                   <div className='inner'>
                     <ul >
                       <li>
@@ -102,7 +100,7 @@ const Header = () => {
                   </div>
                 </li>
                 <li className='nav-item' data-aos="fade-right" data-aos-duration="1000">
-                  <Link to='/Hekimlerimiz' className='nav-link'> <span>  Həkimlrimiz </span>  </Link> 
+                  <Link to='/Hekimlerimiz' className='nav-link'> <span>  Həkimlərimiz </span>  </Link> 
                   </li>
                 <li className='nav-item' data-aos="fade-right" data-aos-duration="1000">
                   <Link to='/Meqaleler' className='nav-link'> <span>  Məqalələr </span> </Link>  

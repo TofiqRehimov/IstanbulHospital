@@ -1,0 +1,10 @@
+.DoctorInfoImg{
+   position: relative;
+ 
+}
+.DoctorInfoImg img{
+    position: absolute;
+  width: 100%;
+  height: 400px;
+  
+ }

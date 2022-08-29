@@ -5,7 +5,7 @@ import "swiper/css/pagination";
 // import "swiper/css/navigation";
 import { Mousewheel, Pagination,Autoplay } from "swiper";
 import './Corusels.css';
-import img from '../img/niye-biz-esas-sehife.jpg';
+import img from '../img/indir.png';
 const Corusels = () => {
 
   return (

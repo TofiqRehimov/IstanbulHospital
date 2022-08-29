@@ -1,5 +1,5 @@
 import React from 'react';
-import img from '../img/niye-biz-esas-sehife.jpg';
+import img from '../img/indir.png';
 
 const Article = () => {
     return (

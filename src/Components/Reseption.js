@@ -1,6 +1,9 @@
 import React, { UseState } from 'react';
 import './reseption.css';
-import img from '../img/niye-biz-esas-sehife.jpg';
+import img from '../img/indir.png';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+
 const Reseption = () => {
 
   const onChange = (date) => {
@@ -11,17 +14,17 @@ const Reseption = () => {
     <div className='container mt-4 reseption'>
       <div className='row justify-content-between'>
         <div className='col-lg-6'>
-        <div className="col-md-12">
-                  
-                  <img
-                      src={img}
-                      alt="Trendy Pants and Shoes"
-                      className=""
-                  />
-              
-              </div>
+          <div className="col-md-12" data-aos="fade-up" data-aos-duration="1000">
+
+            <img
+              src={img}
+              alt="Trendy Pants and Shoes"
+              className=""
+            />
+
+          </div>
         </div>
-        <div className='col-lg-5 mt-4 justify-content-center'>
+        <div className='col-lg-5 mt-4 justify-content-center' data-aos="fade-up" data-aos-duration="1000">
           <form action="" >
             <label for="fname">Ad Soyad</label>
             <input type="text" id="fname" name="firstname" placeholder="Ad Soyad.." />
@@ -51,10 +54,11 @@ const Reseption = () => {
               </div>
             </div>
 
-
-
-
-            <input type="submit" value="Submit" />
+            <div className='col-md-3 mt-3'>
+                <Stack spacing={2} direction="row">
+                  <Button variant="contained">Göndər</Button>
+                </Stack>
+              </div>
           </form>
         </div>
       </div>

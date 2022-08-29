@@ -4,8 +4,11 @@ import Cheked from '../img/checked.png';
 import Processor from '../img/processor.png';
 import Labatory from '../img/lab-tool.png';
 import Empolees from '../img/employees.png';
-import doctor from '../img/niye-biz-esas-sehife.jpg';
+import doctor from '../img/indir.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShieldHalved,faUserDoctor,faVialCircleCheck,faHospital,faHeartPulse } from '@fortawesome/free-solid-svg-icons'
 const Content = () => {
+
     return (
         <div className=' container mt-4 mb-4'>
             <div className='row'>
@@ -15,7 +18,11 @@ const Content = () => {
                         <li data-aos="fade-up"
                             data-aos-duration="1000">
                             <div >
-                                <img src={Cheked} className=" " alt="" />
+                                <p>
+                                
+                                <FontAwesomeIcon icon={faHeartPulse} size="lg" className='medical-icon'/>
+                                </p>
+
                                 <span>ETİBARLILIQ</span>
                                 <p>Həmvətənlərimiz tibbimizə, avadanlığımıza, həkimlərimizə, klinikalarımıza,
                                     xidmət səviyyəmizə və təqdim olunan rahatlığa etibar edir.</p>
@@ -24,16 +31,18 @@ const Content = () => {
                         <li data-aos="fade-up"
                             data-aos-duration="1000">
                             <div>
-                                <img src={Processor} className=" " alt="" />
+                               
+                            <FontAwesomeIcon icon={ faHospital}  size="lg" className='medical-icon'  />
                                 <span>ƏN MÜASİR AVADANLIQ</span>
-                                <p>Hayat Klinikası beynəlxalq protokollara uyğun olaraq yüksək səviyyəli diaqnostik tədqiqatların
+                                <p>Istanbul Hospital beynəlxalq protokollara uyğun olaraq yüksək səviyyəli diaqnostik tədqiqatların
                                     aparılmasına imkan verən mütəxəssis avadanlıqları ilə təchiz edilmişdir</p>
                             </div>
                         </li>
                         <li data-aos="fade-up"
                             data-aos-duration="1000">
                             <div>
-                                <img src={Labatory} className=" " alt="" />
+                       
+                                <FontAwesomeIcon icon={faVialCircleCheck}  size="lg" className='medical-icon'  />
                                 <span>DƏQİQ LABORATOR ANALİZ</span>
                                 <p>Klinikamızda yalnız Avropada və Amerika, İsrail və Kanada kimi ölkələrdə istehsal olunan reaktivlər istifadə olunur. Bütün laboratoriya testləri bütün dünyada qəbul edilir.
                                     Avtomatlaşdırılmış laboratoriya avadanlığı insan amilini aradan qaldırır.</p>
@@ -42,7 +51,8 @@ const Content = () => {
                         <li data-aos="fade-up"
                             data-aos-duration="1000">
                             <div>
-                                <img src={Empolees} className=" " alt="" />
+                            <FontAwesomeIcon icon={faUserDoctor}  size="lg" className='medical-icon'  /> 
+                                {/* <img src={Empolees} className=" " alt="" /> */}
                                 <span>PEŞƏKAR HEYYƏT</span>
                                 <p>Tibb Mərkəzinin dəyərli sərmayəsi Avropada ixtisaslaşmış peşəkar həkimlərdirs</p>
                             </div>
@@ -56,6 +66,7 @@ const Content = () => {
 
                         <div className='content-img'>
                             <img src={doctor} className=" " alt="" />
+                           
                         </div>
                         <div className='divider'></div>
                     </div>

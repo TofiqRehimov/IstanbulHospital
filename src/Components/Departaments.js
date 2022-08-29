@@ -1,13 +1,14 @@
 import React from 'react';
-import img from '../img/niye-biz-esas-sehife.jpg';
+import {Link} from 'react-router-dom';
+import img from '../img/indir.png';
 
 const Departaments = () => {
     return (
         <div className='container mt-3'>
             <div className='col-md-12'>
                 <div className='row'>
-          
                     <div className='col-md-4 mt-4'>
+                    <Link to='/DepartamentsInfo' >
                         <div className="card " data-aos="fade-up" data-aos-duration="1000"
                             data-aos-anchor-placement="top-center">
                             <img src={img} className="card-img-top float-right" alt="Sunset Over the Sea" />
@@ -16,8 +17,10 @@ const Departaments = () => {
                                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             </div>
                         </div>
+                    </Link>
                     </div>
                     <div className='col-md-4 mt-4'>
+                    <Link to='/DepartamentsInfo'>
                         <div className="card " data-aos="fade-up" data-aos-duration="1000"
                             data-aos-anchor-placement="top-center">
                             <img src={img} className="card-img-top float-right" alt="Sunset Over the Sea" />
@@ -26,9 +29,11 @@ const Departaments = () => {
                                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             </div>
                         </div>
+                        </Link>
                     </div>
 
                     <div className='col-md-4 mt-4'>
+                    <Link to='/DepartamentsInfo'>
                         <div className="card " data-aos="fade-up" data-aos-duration="1000"
                             data-aos-anchor-placement="top-center">
                             <img src={img} className="card-img-top float-right" alt="Sunset Over the Sea" />
@@ -37,8 +42,10 @@ const Departaments = () => {
                                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             </div>
                         </div>
+                        </Link>
                     </div>
                     <div className='col-md-4 mt-4'>
+                    <Link to='/DepartamentsInfo'>
                         <div className="card " data-aos="fade-up" data-aos-duration="1000"
                             data-aos-anchor-placement="top-center">
                             <img src={img} className="card-img-top float-right" alt="Sunset Over the Sea" />
@@ -47,9 +54,11 @@ const Departaments = () => {
                                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             </div>
                         </div>
+                        </Link>
                     </div>
              
                     <div className='col-md-4 mt-4'>
+                    <Link to='/DepartamentsInfo'>
                         <div className="card " data-aos="fade-up" data-aos-duration="1000"
                             data-aos-anchor-placement="top-center">
                             <img src={img} className="card-img-top float-right" alt="Sunset Over the Sea" />
@@ -58,8 +67,10 @@ const Departaments = () => {
                                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             </div>
                         </div>
+                        </Link>
                     </div>
                     <div className='col-md-4 mt-4'>
+                    <Link to='/DepartamentsInfo'>
                         <div className="card " data-aos="fade-up" data-aos-duration="1000"
                             data-aos-anchor-placement="top-center">
                             <img src={img} className="card-img-top float-right" alt="Sunset Over the Sea" />
@@ -68,9 +79,11 @@ const Departaments = () => {
                                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             </div>
                         </div>
+                        </Link>
                     </div>
              
                     <div className='col-md-4 mt-4'>
+                        
                         <div className="card " data-aos="fade-up" data-aos-duration="1000"
                             data-aos-anchor-placement="top-center">
                             <img src={img} className="card-img-top float-right" alt="Sunset Over the Sea" />
@@ -81,6 +94,7 @@ const Departaments = () => {
                         </div>
                     </div>
                     <div className='col-md-4 mt-4'>
+                    <Link to='/DepartamentsInfo'>
                         <div className="card " data-aos="fade-up" data-aos-duration="1000"
                             data-aos-anchor-placement="top-center">
                             <img src={img} className="card-img-top float-right" alt="Sunset Over the Sea" />
@@ -89,8 +103,10 @@ const Departaments = () => {
                                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             </div>
                         </div>
+                        </Link>
                     </div>
                     <div className='col-md-4 mt-4'>
+                    <Link to='/DepartamentsInfo'>
                         <div className="card " data-aos="fade-up" data-aos-duration="1000"
                             data-aos-anchor-placement="top-center">
                             <img src={img} className="card-img-top float-right" alt="Sunset Over the Sea" />
@@ -99,8 +115,10 @@ const Departaments = () => {
                                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             </div>
                         </div>
+                        </Link>
                     </div>
                     <div className='col-md-4 mt-4'>
+                    <Link to='/DepartamentsInfo'>
                         <div className="card " data-aos="fade-up" data-aos-duration="1000"
                             data-aos-anchor-placement="top-center">
                             <img src={img} className="card-img-top float-right" alt="Sunset Over the Sea" />
@@ -109,6 +127,7 @@ const Departaments = () => {
                                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             </div>
                         </div>
+                        </Link>
                     </div>
                 </div>
             </div>

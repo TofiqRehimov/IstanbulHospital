@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import './Articles.css';
-import img from '../img/niye-biz-esas-sehife.jpg';
+import img from '../img/indir.png';
 const Articles = () => {
     return (
         <div className='container'>
@@ -34,8 +34,7 @@ const Articles = () => {
                 data-aos-duration="1000"
             >
 
-
-              
+        
                 <SwiperSlide>
                     <Link to="/Meqaleler/Meqale">
                    <div className='article-img'>   <img

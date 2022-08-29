@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
-import img from '../img/niye-biz-esas-sehife.jpg';
+import img from '../img/indir.png';
 const Companies = () => {
     return (
         <div className='container mt-3'>

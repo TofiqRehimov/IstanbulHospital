@@ -1,6 +1,6 @@
 import React from 'react';
-import img from '../img/niye-biz-esas-sehife.jpg';
-
+import {Link} from 'react-router-dom'
+import img from '../img/indir.png';
 const Doctors = () => {
     return (
         <div className='container' >
@@ -8,17 +8,19 @@ const Doctors = () => {
             <div className='col-md-12 mt-4 mb-2'>
                 <h2> Həkimlər </h2>
             </div>
+
             <div className='col-md-3 'data-aos="fade-right" data-aos-duration="1000">
+
             <div className="card mb-3" >
               <div className="row ">
                   <div className="col-md-12">
-                  
+                  <Link to="/DoctorInfo">
                       <img
                           src={img}
                           alt="Trendy Pants and Shoes"
                           className="doctors-img"
                       />
-                  
+                  </Link>
                   </div>
                   <div className="col-md-12">
                       <div className="card-body">

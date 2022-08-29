@@ -9,14 +9,16 @@ const ContactsHeader = () => {
                 <div className='row '>
                     <div className='col-lg-auto d-flex header-tel'>
                         <ul className='' >
-                            <li className='mr-2' data-aos="fade-down" data-aos-duration="1000"> <span>012 111 11 11</span> </li>
+                           
+                            <li className='mr-2' data-aos="fade-down" data-aos-duration="1000"> <span>012 562 40 02</span> </li>
+                            
                             <li className='' data-aos="fade-down" data-aos-duration="1000"> <span> istanbul_hospital@gmail.com</span> </li>
                         </ul>
                     </div>
                     <div className='col-lg-auto Language'data-aos="fade-down" data-aos-duration="1000">
                         <p>AZ</p>
                         <p>EN</p>
-                        <p>RU jivo chat</p>
+                        <p>RU</p>
                     </div>
                     <div className='col-md-auto' data-aos="fade-down" data-aos-duration="1000">
                         <span className='sosials-icons' data-aos="fade-down" data-aos-duration="1000">

@@ -31,21 +31,20 @@ input[type=text], select,option{
     /* height: 100%; */
     align-items: center;
   }
-  input[type=submit] {
-    border: 1px solid #0000;
+  input[type=file] {
+    border: 1px solid #d8d8d8;
     outline: none;
-    padding: 5px  16px;
+    padding: 10px 11px 9px 16px;
     box-sizing: border-box;
     border-radius: 10px;
     display: flex;
     position: relative;
     /* height: 100%; */
     align-items: center;
-    margin-top: 10px;
-    background-color: green;
-    color: #fff;
   }
+
   
+ 
   input[type=submit]:hover {
     background-color: #ff3300;
     color: #fff;
@@ -54,6 +53,18 @@ input[type=text], select,option{
     width: 80%;
     height: 500px;
     border-radius: 10px;
+  }
+  textarea{
+    border: 1px solid #d8d8d8;
+    outline: none;
+    padding: 1px 11px 9px 16px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    position: relative;
+    height: 100%;
+    align-items: center;
+    width: 100%;
   }
   /* div {
     border-radius: 5px;
