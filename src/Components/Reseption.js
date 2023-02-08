@@ -14,13 +14,15 @@ const Reseption = () => {
   }, [dispatch]);
 
   const reserDocApi = useSelector((state) => state.reservSliece?.data);
-  // const docDate = (dD) => {
-  //   return dD.filter((doctorDate) => keys.some(key => doctorDate[key] || []))
-  // }
 
+
+  const [sdays, setDays] = useState([]);
+  const [shours, setHours] = useState([]);
   const [sregister, setRegister] = useState([]);
-  const [days, setDays] = useState([]);
-  const [hours, setHours] = useState([]);
+  console.log("sregister", sregister)
+  console.log("hours", shours)
+  console.log("sdays", sdays)
+  console.log("reserDocApi", reserDocApi)
 
   const createRegister = (e) => {
     e.preventDefault();
@@ -31,21 +33,34 @@ const Reseption = () => {
         console.log("res", res);
       });
     console.log("Create Register");
+    console.log("model", model);
   };
+  const handle = (e) => {
+    setRegister({ ...sregister, [e.target.name]: e.target.value })
+    console.log('est', e.target.value)
+  }
   const selectDoctor = (e) => {
+    setRegister({ ...sregister, [e.target.name]: e.target.value })
+
     setDays(reserDocApi.filter((adm) => adm.id === parseInt(e.target.value)));
+
   };
   const selectDay = (e) => {
+    setRegister({ ...sregister, [e.target.name]: e.target.value })
     setHours(
-      days?.map((day) =>
-        day?.days?.filter((hours) => hours.id === parseInt(e.target.value))
-      )
-    );
-    hours?.map((hour) =>
-      hour?.map((h) => h?.hours?.map((hr) => console.log(hr)))
-    );
-  };
+      sdays.map((day) => day.days.map((h) => h.hours))
 
+    );
+
+
+    // setRegister(hours)
+  };
+  const selectHours = (e) => {
+    setRegister({ ...sregister, [e.target.name]: e.target.value });
+    shours?.map((hour) =>
+      hour?.map((h) => h?.hours?.map((hr) => console.log("hrrr", hr)))
+    );
+  }
   return (
     <div className="container mt-4 reseption">
       <div className="row justify-content-between">
@@ -71,6 +86,7 @@ const Reseption = () => {
               name="fullname"
               placeholder="Ad Soyad.."
               value={sregister.fullname}
+              onChange={handle}
             />
 
             <label for="lname">Telefon</label>
@@ -80,6 +96,7 @@ const Reseption = () => {
               name="phone"
               placeholder="Telefon.."
               value={sregister.phone}
+              onChange={handle}
             />
 
             <label for="fname">Mail</label>
@@ -88,11 +105,12 @@ const Reseption = () => {
               id=""
               name="email"
               placeholder="Mail.."
-              value={sregister.email}
+              value={sregister?.email}
+              onChange={handle}
             />
 
             <label for="">Həkim seçin</label>
-            <select key="" id="" name="doctor" onChange={selectDoctor}>
+            <select key="" id="" name="doctor_id" onChange={selectDoctor} >
               <option> Həkim adı seçin</option>
               {reserDocApi?.map((doctorName) => (
                 <option key={doctorName?.id} value={doctorName?.id}>
@@ -105,12 +123,12 @@ const Reseption = () => {
             <div className="">
               <div className="col-md-4">
                 <label for="">Tarix Seçin</label>
-                <select key="" id="" name="day" onChange={selectDay}>
+                <select key="" id="" name="admission_day" onChange={selectDay}>
                   <option> Tarix Seçin</option>
-                  {days?.length > 0 &&
-                    days?.map((Day) =>
+                  {sdays?.length > 0 &&
+                    sdays?.map((Day) =>
                       Day?.days?.map((s) => (
-                        <option key={s?.id} value={s?.id}>
+                        <option key={s?.id} value={s?.admission_day}>
                           {" "}
                           {s?.admission_day}
                         </option>
@@ -120,18 +138,17 @@ const Reseption = () => {
               </div>
               <div className="col-md-4">
                 <label for="">Saat Seçin</label>
-                <select key="" id="" name="hour_id">
+                <select key="" id="" name="admission_hour" onChange={selectHours}>
                   <option> Saat Seçin</option>
-                  {hours?.map((hour) =>
-                    hour?.map((h) =>
-                      h?.hours?.map((hr) => (
-                        <option key={hr?.id} value={hr?.id}>
-                          {" "}
-                          {hr?.admission_hour}
-                        </option>
-                      ))
-                    )
-                  )}
+                  {
+                    shours.filter((s) => s.admission_hour).map((hs) => (
+                      // <option key={o?.id} value={o?.admission_hour}>
+                      //   {" "}
+                      //   {o?.admission_hour}
+                      // </option>
+                      console.log("hr", hs)
+                    ))
+                  }
                 </select>
               </div>
             </div>

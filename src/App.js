@@ -49,9 +49,12 @@ function App() {
 
       <ContactsHeader />
       <Header setSearch={setSearch} handleSubmit={handleSubmit} />
+      <Routes>
+        <Route path='/Search' element={<Search searchData={searchData(searchSlice)} />} />
+      </Routes>
+
 
       <Routes>
-
         <Route path='/' exact element={<Home />} />
         <Route path='/Haqqimizda' element={<About />} />
         <Route path='/departments' element={<Departaments />} />
@@ -65,7 +68,7 @@ function App() {
         <Route path="/doctorsInfo/:id" element={<DoctorInfo />} />
         <Route path='/block/:id' element={< Article />} />
         <Route path='/Compaign/:id' element={< CompaignInfo />} />
-        <Route path='/Search' element={<Search searchData={searchData(searchSlice)} />} />
+
       </Routes>
 
       <Footter />
