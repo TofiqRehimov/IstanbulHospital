@@ -14,13 +14,15 @@ const Reseption = () => {
   }, [dispatch]);
 
   const reserDocApi = useSelector((state) => state.reservSliece?.data);
-  // const docDate = (dD) => {
-  //   return dD.filter((doctorDate) => keys.some(key => doctorDate[key] || []))
-  // }
 
+
+  const [sdays, setDays] = useState([]);
+  const [shours, setHours] = useState([]);
   const [sregister, setRegister] = useState([]);
-  const [days, setDays] = useState([]);
-  const [hours, setHours] = useState([]);
+  console.log("sregister", sregister)
+  console.log("hours", shours)
+  console.log("sdays", sdays)
+  console.log("reserDocApi", reserDocApi)
 
   const createRegister = (e) => {
     e.preventDefault();
@@ -31,21 +33,34 @@ const Reseption = () => {
         console.log("res", res);
       });
     console.log("Create Register");
+    console.log("model", model);
   };
+  const handle = (e) => {
+    setRegister({ ...sregister, [e.target.name]: e.target.value })
+    console.log('est', e.target.value)
+  }
+
   const selectDoctor = (e) => {
     setDays(reserDocApi.filter((adm) => adm.id === parseInt(e.target.value)));
   };
   const selectDay = (e) => {
     setHours(
-      days?.map((day) =>
+      sdays?.map((day) =>
         day?.days?.filter((hours) => hours.id === parseInt(e.target.value))
       )
     );
-    hours?.map((hour) =>
+    shours?.map((hour) =>
       hour?.map((h) => h?.hours?.map((hr) => console.log(hr)))
     );
   };
-
+  // const selectHours = (e) => {
+  //   // setRegister({ ...sregister, [e.target.name]: e.target.value });
+  //   setHours(
+  //     sdays?.map((day) =>
+  //       day?.days?.filter((hours) => hours.id === parseInt(e.target.value))
+  //     )
+  //   );
+  // }
   return (
     <div className="container mt-4 reseption">
       <div className="row justify-content-between">
@@ -71,6 +86,7 @@ const Reseption = () => {
               name="fullname"
               placeholder="Ad Soyad.."
               value={sregister.fullname}
+              onChange={handle}
             />
 
             <label for="lname">Telefon</label>
@@ -80,6 +96,7 @@ const Reseption = () => {
               name="phone"
               placeholder="Telefon.."
               value={sregister.phone}
+              onChange={handle}
             />
 
             <label for="fname">Mail</label>
@@ -89,10 +106,11 @@ const Reseption = () => {
               name="email"
               placeholder="Mail.."
               value={sregister.email}
+              onChange={handle}
             />
 
             <label for="">Həkim seçin</label>
-            <select key="" id="" name="doctor" onChange={selectDoctor}>
+            <select key="" id="" name="doctor_id" onChange={selectDoctor}>
               <option> Həkim adı seçin</option>
               {reserDocApi?.map((doctorName) => (
                 <option key={doctorName?.id} value={doctorName?.id}>
@@ -107,8 +125,8 @@ const Reseption = () => {
                 <label for="">Tarix Seçin</label>
                 <select key="" id="" name="day" onChange={selectDay}>
                   <option> Tarix Seçin</option>
-                  {days?.length > 0 &&
-                    days?.map((Day) =>
+                  {sdays?.length > 0 &&
+                    sdays?.map((Day) =>
                       Day?.days?.map((s) => (
                         <option key={s?.id} value={s?.id}>
                           {" "}
@@ -122,7 +140,7 @@ const Reseption = () => {
                 <label for="">Saat Seçin</label>
                 <select key="" id="" name="hour_id">
                   <option> Saat Seçin</option>
-                  {hours?.map((hour) =>
+                  {shours?.map((hour) =>
                     hour?.map((h) =>
                       h?.hours?.map((hr) => (
                         <option key={hr?.id} value={hr?.id}>

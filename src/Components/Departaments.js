@@ -13,7 +13,6 @@ const Departaments = (props) => {
     }, [dispatch, id])
 
     const departament = useSelector(state => state?.depart?.data)
-    // console.log(" DepartamnetsINfo: ", departament)
 
     return (
         <div className='container mt-3'>

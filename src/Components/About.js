@@ -11,7 +11,7 @@ const About = () => {
     }, [dispatch])
 
     const About = useSelector(state => state?.aboutSlices?.data)
-    console.log("About", About)
+
     return (
         <div className=' container mt-4 mb-4'>
             <div className='row'>

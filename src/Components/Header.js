@@ -4,7 +4,6 @@ import './Headers.css';
 import Logo from "../img/Hekimler/LOGO.png"
 import { BsSearch } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
-import Search from './Search';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchNavDepartamentsSlice } from '../Redux/NavSlice';
 import { fecthContactSlice } from '../Redux/ContactSlice';
@@ -32,9 +31,6 @@ const Header = (props) => {
     dispatch(fecthContactSlice())
   }, [dispatch])
   const contact = useSelector(state => state?.contactSlice?.data?.data?.[2]?.details)
-
-
-
 
   return (
     <div className='Header' data-aos="fade-down" data-aos-duration="1000">

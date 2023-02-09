@@ -13,7 +13,7 @@ const Doctors = (props) => {
     }, [dispatch])
 
     const { data } = useSelector(state => state.data)
-    console.log("Doctorsapi ", data)
+
     return (
         <div className='container' >
 

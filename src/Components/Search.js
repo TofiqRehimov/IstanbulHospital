@@ -4,8 +4,6 @@ import "./Search.css";
 
 const Search = ({ searchData }) => {
 
-
-
     return (
         <div className='container mt-2 mb-2' data-aos="fade-right" data-aos-duration="1000">
             <dic className="row">

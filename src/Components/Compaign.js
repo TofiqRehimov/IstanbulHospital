@@ -12,7 +12,7 @@ const Compaign = (props) => {
         dispatch(fetchCompaignSlice())
     }, [dispatch])
     const compaigns = useSelector(state => state?.compaignSlice?.data)
-    console.log("Compaigns", compaigns?.id)
+
 
     return (
 

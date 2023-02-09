@@ -15,7 +15,7 @@ const DepartamentsInfo = () => {
     }, [dispatch, id])
 
     const departament = useSelector(state => state?.depart?.data)
-    // console.log('DeparInfos', departament)
+
     return (
         <div className='container mt-3 mb-3 DepartamentsInfo'>
             <div className='row'>

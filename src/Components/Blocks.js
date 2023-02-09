@@ -13,7 +13,7 @@ const Blocks = (props) => {
     }, [dispatch, id])
 
     const BloksApi = useSelector(state => state?.BlogSlice?.data)
-    console.log("BlogAPI", BloksApi)
+
     return (
         <div className='container mt-3'>
             <div className='row'>

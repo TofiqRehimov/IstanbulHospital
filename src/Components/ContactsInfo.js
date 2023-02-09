@@ -16,7 +16,7 @@ const ContactsInfo = () => {
     }, [dispatch])
 
     const contacts = useSelector(state => state?.contactSlice?.data?.data)
-    // console.log("contacts", contacts)
+
     return (
         <div className='container mt-4'>
             <div className='row'>

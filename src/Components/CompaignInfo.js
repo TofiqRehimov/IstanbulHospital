@@ -14,8 +14,6 @@ const CompaignInfo = () => {
 
     const blogInfo = useSelector(state => state?.compaignSlice?.data)
 
-    console.log("------", blogInfo)
-
     return (
         <div className='container' >
             <div className='row'>

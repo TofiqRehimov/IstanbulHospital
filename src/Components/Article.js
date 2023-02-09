@@ -12,7 +12,7 @@ const Article = () => {
 
     const blogInfo = useSelector(state => state?.BlogSlice?.data)
     // const compaigns = useSelector(state => state.compaignSlice)
-    console.log("bloqInfo", blogInfo)
+
     return (
         <div className='container' >
             <div className='row'>

@@ -16,11 +16,6 @@ const DoctorInfo = () => {
         dispatch(fetchdoctorDetail(id))
     }, [dispatch, id])
     const { data } = useSelector(state => state.data)
-    console.log("doctors data", data)
-
-
-
-
 
     return (
         <div className='container mt-4' key={data?.id}>
