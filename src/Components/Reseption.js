@@ -16,6 +16,7 @@ const Reseption = () => {
   const reserDocApi = useSelector((state) => state.reservSliece?.data);
 
 
+
   const [sdays, setDays] = useState([]);
   const [shours, setHours] = useState([]);
   const [sregister, setRegister] = useState([]);
@@ -24,6 +25,15 @@ const Reseption = () => {
   console.log("sdays", sdays)
   console.log("reserDocApi", reserDocApi)
 
+  const selectValue = [{
+    fullname: sregister?.fullname,
+    phone: sregister?.phone,
+    email: sregister?.email,
+    doctor_id: reserDocApi?.id,
+    admission_day: sdays?.days?.admission_day,
+    admission_hour: shours?.hours?.admission_hour
+  }]
+  console.log("selectValue", selectValue)
   const createRegister = (e) => {
     e.preventDefault();
     const model = sregister;
@@ -41,9 +51,11 @@ const Reseption = () => {
   }
 
   const selectDoctor = (e) => {
+    setRegister({ ...sregister, [e.target.name]: e.target.value })
     setDays(reserDocApi.filter((adm) => adm.id === parseInt(e.target.value)));
   };
   const selectDay = (e) => {
+    setRegister({ ...sregister, [e.target.name]: e.target.value })
     setHours(
       sdays?.map((day) =>
         day?.days?.filter((hours) => hours.id === parseInt(e.target.value))
@@ -123,7 +135,7 @@ const Reseption = () => {
             <div className="">
               <div className="col-md-4">
                 <label for="">Tarix Seçin</label>
-                <select key="" id="" name="day" onChange={selectDay}>
+                <select key="" id="" name="admission_day" onChange={selectDay}>
                   <option> Tarix Seçin</option>
                   {sdays?.length > 0 &&
                     sdays?.map((Day) =>
@@ -138,12 +150,12 @@ const Reseption = () => {
               </div>
               <div className="col-md-4">
                 <label for="">Saat Seçin</label>
-                <select key="" id="" name="hour_id">
+                <select key="" id="" name="hour_id" onChange={handle} >
                   <option> Saat Seçin</option>
                   {shours?.map((hour) =>
                     hour?.map((h) =>
                       h?.hours?.map((hr) => (
-                        <option key={hr?.id} value={hr?.id}>
+                        <option key={hr?.id} value={hr?.admission_hour}>
                           {" "}
                           {hr?.admission_hour}
                         </option>
