@@ -58,7 +58,7 @@ const Reseption = () => {
     setRegister({ ...sregister, [e.target.name]: e.target.value })
     setHours(
       sdays?.map((day) =>
-        day?.days?.filter((hours) => hours.id === parseInt(e.target.value))
+        day?.days?.filter((hours) => hours.admission_hour === parseInt(e.target.value))
       )
     );
     shours?.map((hour) =>
@@ -140,7 +140,7 @@ const Reseption = () => {
                   {sdays?.length > 0 &&
                     sdays?.map((Day) =>
                       Day?.days?.map((s) => (
-                        <option key={s?.id} value={s?.id}>
+                        <option key={s?.id} value={s?.admission_day}>
                           {" "}
                           {s?.admission_day}
                         </option>
