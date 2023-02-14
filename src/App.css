@@ -105,5 +105,12 @@ img{
 .myArticles{
   height: 70px !important;
 }
+.con{
+  display: block !important;
+}
+.sos{
+
+  padding:0 0 0 2rem  !important;
+}
 }
 

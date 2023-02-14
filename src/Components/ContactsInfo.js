@@ -24,29 +24,6 @@ const ContactsInfo = () => {
                     <div className='row justify-content-between'>
 
 
-                        {
-                            // contacts?.length > 0 && contacts.map((contact) => (
-                            //     <div className='col-md-4  '>
-                            //         <div className='col-md-12 icons'>
-                            //             <div className='icon'>
-                            //                 <ImLocation2 />
-                            //             </div>
-                            //             <div className='line' ></div>
-                            //             <h3> {contact?.group} </h3>
-                            //             <div className='mailInfo'>
-                            //                 {
-                            //                     contact?.details.map((detail) => (
-                            //                         <span>
-                            //                             {detail?.value}
-                            //                         </span>
-
-                            //                     ))
-                            //                 }
-                            //             </div>
-                            //         </div>
-                            //     </div>
-                            // ))
-                        }
                         <div className='col-md-4  '>
                             <div className='col-md-12 icons'>
                                 <div className='icon'>

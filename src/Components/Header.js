@@ -135,14 +135,14 @@ const Header = (props) => {
 
           <div className='col-md-3'>
             {
-              contact?.map((con) => (
-                <div className='sosials-icons' data-aos="fade-down" data-aos-duration="1000">
-                  <a href={con.link} className='sosials-icons'>
-                    <span dangerouslySetInnerHTML={{ __html: con?.icon }} >
-                    </span>
-                  </a>
-                </div>
-              ))
+              // contact?.map((con) => (
+              //   <div className='sosials-icons' data-aos="fade-down" data-aos-duration="1000">
+              //     <a href={con.link} className='sosials-icons'>
+              //       <span dangerouslySetInnerHTML={{ __html: con?.icon }} >
+              //       </span>
+              //     </a>
+              //   </div>
+              // ))
             }
             <div className='col-md-auto ' data-aos="fade-down" data-aos-duration="1000">
             </div>

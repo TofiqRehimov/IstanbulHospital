@@ -58,21 +58,21 @@ const Reseption = () => {
     setRegister({ ...sregister, [e.target.name]: e.target.value })
     setHours(
       sdays?.map((day) =>
-        day?.days?.filter((hours) => hours.admission_hour === parseInt(e.target.value))
+        day?.days?.map((hour) => hour?.hours || [].filter((h) => h.id === parseInt(e.target.value)))
       )
     );
     shours?.map((hour) =>
-      hour?.map((h) => h?.hours?.map((hr) => console.log(hr)))
+      hour?.map((h) => h?.hours?.map((hr) => console.log("hr", hr)))
     );
   };
-  // const selectHours = (e) => {
-  //   // setRegister({ ...sregister, [e.target.name]: e.target.value });
-  //   setHours(
-  //     sdays?.map((day) =>
-  //       day?.days?.filter((hours) => hours.id === parseInt(e.target.value))
-  //     )
-  //   );
-  // }
+  const selectHours = (e) => {
+    // setRegister({ ...sregister, [e.target.name]: e.target.value });
+    // setHours(
+    //   sdays?.map((day) =>
+    //     day?.days?.map((hour) => hour?.hours || [].filter((h) => h.hour_id === parseInt(e.target.value)))
+    //   )
+    // );
+  }
   return (
     <div className="container mt-4 reseption">
       <div className="row justify-content-between">
@@ -154,8 +154,8 @@ const Reseption = () => {
                   <option> Saat Seçin</option>
                   {shours?.map((hour) =>
                     hour?.map((h) =>
-                      h?.hours?.map((hr) => (
-                        <option key={hr?.id} value={hr?.admission_hour}>
+                      h.map((hr) => (
+                        <option key={hr?.id} value={hr?.id} data-value={hr?.admission_hour}>
                           {" "}
                           {hr?.admission_hour}
                         </option>

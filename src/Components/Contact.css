@@ -16,9 +16,20 @@
 
 .header-tel ul {
   list-style: none;
-  display: flex;
+ 
   margin-top: 3px;
 }
+
+ .con, 
+ .sos{
+  display: flex;
+  align-items: center;
+  
+ }
+  .sos{
+padding-top: 7px;
+  
+ }
 .header-tel,
 .Language,
 section a,
@@ -28,6 +39,7 @@ section a,
 .header-tel ul li span{
     color: #f5f8fa;
     padding: 0.5rem;
+    text-align: center;
 }
 .header-tel:nth-child(1){
   color: #fff; 
