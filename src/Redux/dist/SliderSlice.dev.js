@@ -54,11 +54,6 @@ var sliderSlice = (0, _toolkit.createSlice)({
       state.data = action.payload;
       state.error = ""; // console.log("silder fulfilled")
     });
-    builder.addCase(fetchSlider.rejected, function (state, action) {
-      state.loading = true;
-      state.error = "";
-      console.log(" slicer silece rejected");
-    });
   }
 });
 var addSliders = sliderSlice.actions.addSliders; // export const getAllSliderSlice = (state) => state.data;

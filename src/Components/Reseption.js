@@ -15,25 +15,6 @@ const Reseption = () => {
 
   const reserDocApi = useSelector((state) => state.reservSliece?.data);
 
-
-
-  const [sdays, setDays] = useState([]);
-  const [shours, setHours] = useState([]);
-  const [sregister, setRegister] = useState([]);
-  console.log("sregister", sregister)
-  console.log("hours", shours)
-  console.log("sdays", sdays)
-  console.log("reserDocApi", reserDocApi)
-
-  const selectValue = [{
-    fullname: sregister?.fullname,
-    phone: sregister?.phone,
-    email: sregister?.email,
-    doctor_id: reserDocApi?.id,
-    admission_day: sdays?.days?.admission_day,
-    admission_hour: shours?.hours?.admission_hour
-  }]
-  console.log("selectValue", selectValue)
   const createRegister = (e) => {
     e.preventDefault();
     const model = sregister;
@@ -45,6 +26,19 @@ const Reseption = () => {
     console.log("Create Register");
     console.log("model", model);
   };
+
+
+  const [sdays, setDays] = useState([]);
+  const [shours, setHours] = useState([]);
+  const [sregister, setRegister] = useState([]);
+  console.log("sregister", sregister)
+  console.log("hours", shours)
+  console.log("sdays", sdays)
+  console.log("reserDocApi", reserDocApi)
+
+
+
+
   const handle = (e) => {
     setRegister({ ...sregister, [e.target.name]: e.target.value })
     console.log('est', e.target.value)
@@ -55,24 +49,24 @@ const Reseption = () => {
     setDays(reserDocApi.filter((adm) => adm.id === parseInt(e.target.value)));
   };
   const selectDay = (e) => {
-    setRegister({ ...sregister, [e.target.name]: e.target.value })
+    setRegister({
+      ...sregister, [e.target.name]: e.target.value
+
+    })
     setHours(
       sdays?.map((day) =>
-        day?.days?.map((hour) => hour?.hours || [].filter((h) => h.id === parseInt(e.target.value)))
+        day?.days?.map((hour) => hour?.hours || [].filter((h) => h.admission_hour === parseInt(e.target.value)))
       )
     );
     shours?.map((hour) =>
       hour?.map((h) => h?.hours?.map((hr) => console.log("hr", hr)))
     );
+    console.log("sd", e.target.getAttribute("data-value"))
   };
-  const selectHours = (e) => {
-    // setRegister({ ...sregister, [e.target.name]: e.target.value });
-    // setHours(
-    //   sdays?.map((day) =>
-    //     day?.days?.map((hour) => hour?.hours || [].filter((h) => h.hour_id === parseInt(e.target.value)))
-    //   )
-    // );
-  }
+
+
+
+
   return (
     <div className="container mt-4 reseption">
       <div className="row justify-content-between">
@@ -140,7 +134,7 @@ const Reseption = () => {
                   {sdays?.length > 0 &&
                     sdays?.map((Day) =>
                       Day?.days?.map((s) => (
-                        <option key={s?.id} value={s?.admission_day}>
+                        <option key={s?.id} value={s?.admission_id} >
                           {" "}
                           {s?.admission_day}
                         </option>
@@ -152,17 +146,11 @@ const Reseption = () => {
                 <label for="">Saat Seçin</label>
                 <select key="" id="" name="hour_id" onChange={handle} >
                   <option> Saat Seçin</option>
-                  {shours?.map((hour) =>
-                    hour?.map((h) =>
-                      h.map((hr) => (
-                        <option key={hr?.id} value={hr?.id} data-value={hr?.admission_hour}>
-                          {" "}
-                          {hr?.admission_hour}
-                        </option>
-                      ))
-                    )
-                  )}
+                  {shours?.map((hr) => (
+                    console.log("hr", hr)
+                  ))}
                 </select>
+
               </div>
             </div>
 

@@ -33,11 +33,7 @@ const sliderSlice = createSlice({
             state.error = "";
             // console.log("silder fulfilled")
         })
-        builder.addCase(fetchSlider.rejected, (state, action) => {
-            state.loading = true;
-            state.error = "";
-            console.log(" slicer silece rejected")
-        })
+
     }
 })
 

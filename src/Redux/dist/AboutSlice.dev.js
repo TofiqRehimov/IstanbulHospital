@@ -48,7 +48,6 @@ var aboutSlice = (0, _toolkit.createSlice)({
   extraReducers: function extraReducers(builder) {
     builder.addCase(fetchAboutSlice.fulfilled, function (state, action) {
       state.data = action.payload;
-      state.loading = true;
     });
   }
 });

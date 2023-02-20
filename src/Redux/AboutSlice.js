@@ -22,7 +22,6 @@ const aboutSlice = createSlice({
     extraReducers: (builder) => {
         builder.addCase(fetchAboutSlice.fulfilled, (state, action) => {
             state.data = action.payload;
-            state.loading = true;
         })
     }
 })
