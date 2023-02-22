@@ -6,6 +6,8 @@ import Stack from '@mui/material/Stack';
 import './ContactInfo.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { fecthContactSlice } from '../Redux/ContactSlice';
+import { useState } from 'react';
+import axios from 'axios';
 
 const ContactsInfo = () => {
 
@@ -17,6 +19,29 @@ const ContactsInfo = () => {
 
     const contacts = useSelector(state => state?.contactSlice?.data?.data)
 
+    const [scontact, setContact] = useState()
+    console.log("scontact", scontact)
+
+    const createContact = async (e) => {
+
+        e.preventDefault();
+        const model = scontact
+        await axios.post("https://admin.istanbulhospital.az/api/contact/getContact", model)
+            .then((con) => {
+                console.log("con", con)
+            })
+        console.log("Creaete Contact", scontact)
+
+    }
+
+    const click = (e) => {
+        setContact({ ...scontact, [e.target.name]: e.target.value })
+        console.log('est', e.target.value)
+    }
+    const ClickFile = (e) => {
+        let file = e.target.files[0]
+        setContact({ ...scontact, file: file })
+    }
     return (
         <div className='container mt-4'>
             <div className='row'>
@@ -70,26 +95,26 @@ const ContactsInfo = () => {
                     <div className='col-md-12'>
                         <h4> Mesaj göndər</h4>
                     </div>
-                    <form action="" >
+                    <form action="" onSubmit={createContact} >
                         <label for="fname">Ad Soyad</label>
-                        <input type="text" className='w-100' id="fname" name="firstname" placeholder="Ad Soyad.." />
+                        <input type="text" className='w-100' name="fullname" placeholder="Ad Soyad.." onChange={click} />
 
                         <label for="lname">Telefon</label>
-                        <input type="text" className='w-100' id="lname" name="lastname" placeholder="Telefon.." />
+                        <input type="text" className='w-100' name="phone" placeholder="Telefon.." onChange={click} />
 
                         <label for="fname">Mail</label>
-                        <input type="text" className='w-100' id="fname" name="firstname" placeholder="Mail.." />
+                        <input type="text" className='w-100' name="email" placeholder="Mail.." onChange={click} />
                         <label for="fname">Başlıq</label>
-                        <input type="text" className='w-100' id="fname" name="firstname" placeholder="Başlıq.." />
+                        <input type="text" className='w-100' name="title" placeholder="Başlıq.." onChange={click} />
                         <label for="fname">Sənət yüklə</label>
-                        <input type="file" className='w-100' id="fname" name="" placeholder="Başlıq.." />
+                        <input type="file" className='w-100' name="file" placeholder="Başlıq.." onChange={ClickFile} />
 
                         <label for="fname">Mesaj</label>
-                        <textarea cols="40" rows="10"></textarea>
+                        <textarea cols="40" rows="10" name="text" onChange={click}  ></textarea>
                         <div className='col-md-3 mt-3'>
                             <Stack spacing={2} direction="row">
                                 <button className='btn btn primary'> Göndər</button>
-                                {/* <Button variant="contained">Göndər</Button> */}
+
                             </Stack>
                         </div>
 

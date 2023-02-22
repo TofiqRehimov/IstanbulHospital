@@ -54,7 +54,7 @@ function App() {
       </Routes>
 
 
-      <Routes>
+      <Routes >
         <Route path='/' exact element={<Home />} />
         <Route path='/Haqqimizda' element={<About />} />
         <Route path='/departments' element={<Departaments />} />

@@ -144,10 +144,17 @@ const Reseption = () => {
               </div>
               <div className="col-md-4">
                 <label for="">Saat Seçin</label>
-                <select key="" id="" name="hour_id" onChange={handle} >
+                <select key="" id="" name="hour_id" onChange={selectDay} >
                   <option> Saat Seçin</option>
                   {shours?.map((hr) => (
-                    console.log("hr", hr)
+                    hr?.map((h) => (
+                      h.map((o) => (
+                        <option key={o?.id} value={o?.admission_hour}>
+                          {" "}
+                          {o?.admission_hour}
+                        </option>
+                      ))
+                    ))
                   ))}
                 </select>
 
@@ -163,8 +170,8 @@ const Reseption = () => {
             </div>
           </form>
         </div>
-      </div>
-    </div>
+      </div >
+    </div >
   );
 };
 
