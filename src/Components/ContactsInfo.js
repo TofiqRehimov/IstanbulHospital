@@ -25,6 +25,8 @@ const ContactsInfo = () => {
     const createContact = async (e) => {
 
         e.preventDefault();
+
+
         const model = scontact
         await axios.post("https://admin.istanbulhospital.az/api/contact/getContact", model)
             .then((con) => {
@@ -39,8 +41,10 @@ const ContactsInfo = () => {
         console.log('est', e.target.value)
     }
     const ClickFile = (e) => {
-        let file = e.target.files[0]
+        let file = e.target.files
         setContact({ ...scontact, file: file })
+
+
     }
     return (
         <div className='container mt-4'>

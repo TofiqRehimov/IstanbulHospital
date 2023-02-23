@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import './Articles.css';
 import { fetchBlogsHomeSlice } from '../Redux/BlogsHomeSlice';
-import { faL } from '@fortawesome/free-solid-svg-icons';
+
 
 
 const Articles = () => {

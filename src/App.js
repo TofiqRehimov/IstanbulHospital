@@ -54,20 +54,20 @@ function App() {
       </Routes>
 
 
-      <Routes >
-        <Route path='/' exact element={<Home />} />
-        <Route path='/Haqqimizda' element={<About />} />
-        <Route path='/departments' element={<Departaments />} />
-        <Route path='/doctors' element={<Doctors />} />
-        <Route path='/blocks' element={<Blocks />} />
-        <Route path='/Elaqe' element={<ContactsInfo />} />
-        <Route path="/reservation" element={<Reseption />} />
-        <Route path="/reservation/:id" element={<Reseption />} />
-        <Route path="/company" element={<Compaign />} />
-        <Route path="/departamentsInfo/:id" element={<DepartamentsInfo />} />
-        <Route path="/doctorsInfo/:id" element={<DoctorInfo />} />
-        <Route path='/block/:id' element={< Article />} />
-        <Route path='/Compaign/:id' element={< CompaignInfo />} />
+      <Routes  >
+        <Route path={'/'} exact element={<Home />} />
+        <Route path={'/Haqqimizda'} element={<About />} />
+        <Route path={'/departments'} element={<Departaments />} />
+        <Route path={'/doctors'} element={<Doctors />} />
+        <Route path={'/blocks'} element={<Blocks />} />
+        <Route path={'/Elaqe'} element={<ContactsInfo />} />
+        <Route path={"/reservation"} element={<Reseption />} />
+        <Route path={"/reservation/:id"} element={<Reseption />} />
+        <Route path={"/company"} element={<Compaign />} />
+        <Route path={"/departamentsInfo/:id"} element={<DepartamentsInfo />} />
+        <Route path={"/doctorsInfo/:id"} element={<DoctorInfo />} />
+        <Route path={'/block/:id'} element={< Article />} />
+        <Route path={'/Compaign/:id'} element={< CompaignInfo />} />
 
       </Routes>
 
