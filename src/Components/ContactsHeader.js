@@ -10,7 +10,7 @@ const ContactsHeader = () => {
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch(fecthContactSlice())
-    })
+    }, [])
 
     const contact = useSelector(state => state?.contactSlice?.data?.data)
 
@@ -33,7 +33,7 @@ const ContactsHeader = () => {
                                 <ul className='sos '>
                                     {
                                         contact?.[2]?.details?.map((s) => (
-                                            <li className='' data-aos="fade-down" data-aos-duration="1000"> <a href={s.link}> <span dangerouslySetInnerHTML={{ __html: s?.icon }} ></span> </a></li>
+                                            <li key={s?.id} className='' data-aos="fade-down" data-aos-duration="1000"> <a href={s.link} key={s?.id} > <span key={s?.id} dangerouslySetInnerHTML={{ __html: s?.icon }} ></span> </a></li>
                                         ))
                                     }
                                 </ul>

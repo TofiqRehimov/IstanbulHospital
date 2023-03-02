@@ -21,8 +21,8 @@ const Search = ({ searchData }) => {
                                     </div>
                                     <div className="col-md-12">
                                         <div className="card-body">
-                                            <h5 className="card-title"> {sear?.detail?.name} </h5>
-                                            <p className="card-text">
+                                            <h5 className="card-title" key={sear?.data?.id} > {sear?.detail?.name} </h5>
+                                            <p className="card-text" key={sear?.data?.id}>
                                                 {sear?.detail?.speciality}
 
                                             </p>

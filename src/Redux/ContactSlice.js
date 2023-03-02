@@ -5,7 +5,7 @@ export const fecthContactSlice = createAsyncThunk('contactSlice/fecthContactSlic
     async () => {
         const contactApi = "/api/main/contact";
         const response = await Api.get(`${contactApi}`)
-        console.log('ConAPI', response.data)
+        // console.log('ConAPI', response.data)
         return response.data
 
 
@@ -23,8 +23,8 @@ const contactSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder.addCase(fecthContactSlice.fulfilled, (state, action) => {
-            state.data = action.payload;
-            state.loading = true;
+            // state.data = action.payload;
+            // state.loading = true;
         })
     }
 })

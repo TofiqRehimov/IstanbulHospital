@@ -10,7 +10,7 @@ const CompaignInfo = () => {
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch(fetchCompaignInfoSLice(id))
-    }, [dispatch, id])
+    }, [])
 
     const blogInfo = useSelector(state => state?.compaignSlice?.data)
 

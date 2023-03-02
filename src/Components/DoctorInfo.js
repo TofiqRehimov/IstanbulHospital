@@ -14,7 +14,7 @@ const DoctorInfo = () => {
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch(fetchdoctorDetail(id))
-    }, [dispatch, id])
+    }, [])
     const { data } = useSelector(state => state.data)
 
     return (

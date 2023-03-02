@@ -5,7 +5,7 @@ export const fetchAboutSlice = createAsyncThunk('aboutSlice/fetchAboutSlice',
     async () => {
         const aboutApi = "/api/about";
         const response = await Api.get(`${aboutApi}`)
-        return response.data
+        return response.data.data
     })
 
 const initialState = {

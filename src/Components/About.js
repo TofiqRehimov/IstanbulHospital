@@ -10,12 +10,12 @@ const About = () => {
         dispatch(fetchAboutSlice())
     }, [dispatch])
 
-    const Abouts = useSelector(state => state?.aboutSlices?.data)
+    const Abouts = useSelector(state => state?.aboutSlices)
 
     return (
         <div className=' container mt-4 mb-4'>
             <div className='row'>
-                <div className="content card-text" data-aos="zoom-in" data-aos-duration="1000" dangerouslySetInnerHTML={{ __html: Abouts?.data?.content }}></div>
+                <div key={Abouts?.id} className="content card-text" data-aos="zoom-in" data-aos-duration="1000" dangerouslySetInnerHTML={{ __html: Abouts?.data?.content }}></div>
 
             </div>
         </div>

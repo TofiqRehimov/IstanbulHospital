@@ -11,7 +11,7 @@ const DoctorSlide = () => {
 
     useEffect(() => {
         dispatch(fetchDoctorsHomeSlice())
-    }, [dispatch])
+    }, [])
 
     const doctrosApiSlice = useSelector(state => state.homeDocSlice.data)
 

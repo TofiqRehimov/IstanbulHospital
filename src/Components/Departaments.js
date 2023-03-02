@@ -10,7 +10,7 @@ const Departaments = (props) => {
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch(fetchDeparSlice(id))
-    }, [dispatch, id])
+    }, [])
 
     const departament = useSelector(state => state?.depart?.data)
 

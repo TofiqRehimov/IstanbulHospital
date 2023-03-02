@@ -25,10 +25,10 @@ function App() {
   const dispatch = useDispatch()
   const [search, setSearch] = useState('')
 
-  console.log("setQuery", search)
+
 
   const searchSlice = useSelector(state => state.searchSlices.data) || [];
-  console.log(searchSlice)
+
   const keys = ["name", " title", "slug", "content", "speciality", "quote", "fields"];
 
   const searchData = (data) => {
@@ -41,7 +41,7 @@ function App() {
     dispatch(fetchSearchSlice(search));
     return <Link to="/Search"> </Link>
   }
-  console.log("handle", handleSubmit)
+
   return (
     <div className="App ">
 
@@ -56,7 +56,7 @@ function App() {
 
       <Routes  >
         <Route path={'/'} exact element={<Home />} />
-        <Route path={'/Haqqimizda'} element={<About />} />
+        <Route path={'/About'} element={<About />} />
         <Route path={'/departments'} element={<Departaments />} />
         <Route path={'/doctors'} element={<Doctors />} />
         <Route path={'/blocks'} element={<Blocks />} />

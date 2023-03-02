@@ -15,17 +15,26 @@ const ContactsInfo = () => {
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch(fecthContactSlice())
-    }, [dispatch])
+    }, [])
 
     const contacts = useSelector(state => state?.contactSlice?.data?.data)
 
-    const [scontact, setContact] = useState()
-    console.log("scontact", scontact)
 
+
+
+
+    const [scontact, setContact] = useState({
+        fullname: "",
+        phone: "",
+        email: "",
+        title: "",
+        file: '',
+        text: ""
+    })
+    console.log("scontact", scontact)
     const createContact = async (e) => {
 
         e.preventDefault();
-
 
         const model = scontact
         await axios.post("https://admin.istanbulhospital.az/api/contact/getContact", model)
@@ -33,18 +42,17 @@ const ContactsInfo = () => {
                 console.log("con", con)
             })
         console.log("Creaete Contact", scontact)
+        console.log("model", model)
 
     }
-
     const click = (e) => {
         setContact({ ...scontact, [e.target.name]: e.target.value })
         console.log('est', e.target.value)
     }
     const ClickFile = (e) => {
-        let file = e.target.files
-        setContact({ ...scontact, file: file })
+        let file = e.target.files[0]
 
-
+        setContact({ ...scontact, file })
     }
     return (
         <div className='container mt-4'>
@@ -99,17 +107,17 @@ const ContactsInfo = () => {
                     <div className='col-md-12'>
                         <h4> Mesaj göndər</h4>
                     </div>
-                    <form action="" onSubmit={createContact} >
+                    <form action="" id="form" onSubmit={createContact} >
                         <label for="fname">Ad Soyad</label>
-                        <input type="text" className='w-100' name="fullname" placeholder="Ad Soyad.." onChange={click} />
+                        <input type="text" className='w-100' name="fullname" placeholder="Ad Soyad.." value={scontact.fullname} onChange={(e) => click(e)} />
 
                         <label for="lname">Telefon</label>
-                        <input type="text" className='w-100' name="phone" placeholder="Telefon.." onChange={click} />
+                        <input type="text" className='w-100' name="phone" placeholder="Telefon.." value={scontact.phone} onChange={(e) => click(e)} />
 
                         <label for="fname">Mail</label>
-                        <input type="text" className='w-100' name="email" placeholder="Mail.." onChange={click} />
+                        <input type="text" className='w-100' name="email" placeholder="Mail.." value={scontact.email} onChange={(e) => click(e)} />
                         <label for="fname">Başlıq</label>
-                        <input type="text" className='w-100' name="title" placeholder="Başlıq.." onChange={click} />
+                        <input type="text" className='w-100' name="title" placeholder="Başlıq.." value={scontact.tite} onChange={(e) => click(e)} />
                         <label for="fname">Sənət yüklə</label>
                         <input type="file" className='w-100' name="file" placeholder="Başlıq.." onChange={ClickFile} />
 

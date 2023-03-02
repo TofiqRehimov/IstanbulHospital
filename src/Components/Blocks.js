@@ -10,7 +10,7 @@ const Blocks = (props) => {
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch(fetchBlogsHomeSlice(id))
-    }, [dispatch, id])
+    }, [])
 
     const BloksApi = useSelector(state => state?.BlogSlice?.data)
 

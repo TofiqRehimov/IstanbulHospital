@@ -10,7 +10,7 @@ const Doctors = (props) => {
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch(fetchDoctors());
-    }, [dispatch])
+    }, [])
 
     const { data } = useSelector(state => state.data)
 

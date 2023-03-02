@@ -23,13 +23,13 @@ const Header = (props) => {
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(fetchNavDepartamentsSlice(id))
-  }, [dispatch, id])
+  }, [])
 
   const departaments = useSelector(state => state?.navSlices?.data)
 
   useEffect(() => {
     dispatch(fecthContactSlice())
-  }, [dispatch])
+  }, [])
   const contact = useSelector(state => state?.contactSlice?.data?.data?.[2]?.details)
 
   return (
@@ -60,7 +60,7 @@ const Header = (props) => {
               ? <div className={active} >
                 <ul className='navbar-nav mx-auto mr-3'>
                   <li className='nav-item' data-aos="fade-right" data-aos-duration="1000">
-                    <Link to='/Haqqimizda' className='nav-link'> <span>  Haqqımızda </span> </Link>
+                    <Link to='/About' className='nav-link'> <span>  Haqqımızda </span> </Link>
                   </li>
                   <li className='nav-item nav-active ' data-aos="fade-right" data-aos-duration="1000">
                     <Link to='/departments' className='nav-link  '>  Bölmələrimiz </Link>

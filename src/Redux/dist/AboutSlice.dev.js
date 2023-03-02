@@ -23,7 +23,7 @@ var fetchAboutSlice = (0, _toolkit.createAsyncThunk)('aboutSlice/fetchAboutSlice
 
         case 3:
           response = _context.sent;
-          return _context.abrupt("return", response.data);
+          return _context.abrupt("return", response.data.data);
 
         case 5:
         case "end":

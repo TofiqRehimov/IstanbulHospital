@@ -23,10 +23,9 @@ var fecthContactSlice = (0, _toolkit.createAsyncThunk)('contactSlice/fecthContac
 
         case 3:
           response = _context.sent;
-          console.log('ConAPI', response.data);
           return _context.abrupt("return", response.data);
 
-        case 6:
+        case 5:
         case "end":
           return _context.stop();
       }
@@ -47,9 +46,8 @@ var contactSlice = (0, _toolkit.createSlice)({
     }
   },
   extraReducers: function extraReducers(builder) {
-    builder.addCase(fecthContactSlice.fulfilled, function (state, action) {
-      state.data = action.payload;
-      state.loading = true;
+    builder.addCase(fecthContactSlice.fulfilled, function (state, action) {// state.data = action.payload;
+      // state.loading = true;
     });
   }
 });
