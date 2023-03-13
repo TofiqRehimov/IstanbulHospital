@@ -46,8 +46,9 @@ var contactSlice = (0, _toolkit.createSlice)({
     }
   },
   extraReducers: function extraReducers(builder) {
-    builder.addCase(fecthContactSlice.fulfilled, function (state, action) {// state.data = action.payload;
-      // state.loading = true;
+    builder.addCase(fecthContactSlice.fulfilled, function (state, action) {
+      state.data = action.payload;
+      state.loading = true;
     });
   }
 });

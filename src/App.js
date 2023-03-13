@@ -19,6 +19,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import CompaignInfo from './Components/CompaignInfo';
 import { fetchSearchSlice } from './Redux/SearchSlice';
 import Search from './Components/Search';
+import Whatsaapp from './Components/Whatsaapp';
 
 function App() {
 
@@ -70,7 +71,7 @@ function App() {
         <Route path={'/Compaign/:id'} element={< CompaignInfo />} />
 
       </Routes>
-
+      <Whatsaapp />
       <Footter />
     </div>
   );

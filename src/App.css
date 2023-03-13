@@ -24,7 +24,8 @@ p {
   font-size: 18px;
 }
 img{
-  object-fit: cover;
+  object-fit: cover !important;
+  max-width: 100% !important;
 }
 .card-body{
   background: #f7f7f7;
@@ -111,6 +112,11 @@ img{
 .sos{
 
   padding:0 0 0 2rem  !important;
+}
+.corusel-img{
+  width: auto !important;
+  object-fit: cover!important;
+  max-width: 100%;
 }
 }
 

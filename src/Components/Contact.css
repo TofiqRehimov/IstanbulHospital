@@ -16,8 +16,8 @@
 
 .header-tel ul {
   list-style: none;
- 
-  margin-top: 3px;
+  margin: 0;
+  padding: 0;
 }
 
  .con, 

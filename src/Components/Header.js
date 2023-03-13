@@ -23,14 +23,14 @@ const Header = (props) => {
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(fetchNavDepartamentsSlice(id))
-  }, [])
+  }, [dispatch, id])
 
   const departaments = useSelector(state => state?.navSlices?.data)
 
   useEffect(() => {
     dispatch(fecthContactSlice())
   }, [])
-  const contact = useSelector(state => state?.contactSlice?.data?.data?.[2]?.details)
+  // const contact = useSelector(state => state?.contactSlice?.data?.data?.[2]?.details)
 
   return (
     <div className='Header' data-aos="fade-down" data-aos-duration="1000">

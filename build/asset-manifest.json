@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e3370c36.css",
+    "main.js": "/static/js/main.0c97115a.js",
+    "static/media/istanbulH.JPG": "/static/media/istanbulH.0820376f1dc2ad26ae05.JPG",
+    "static/media/3.jpg": "/static/media/3.af7d11b59295a7e6f44c.jpg",
+    "static/media/istockphoto-1218090920-640_adpp_is.mp4": "/static/media/istockphoto-1218090920-640_adpp_is.592c272d1cea84084ad2.mp4",
+    "static/media/LOGO.png": "/static/media/LOGO.fde24b6c679a6eda9041.png",
+    "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.6959d0d983ee318f8880.woff",
+    "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.b2e5aab643c6f0fd2da6.woff2",
+    "index.html": "/index.html",
+    "main.e3370c36.css.map": "/static/css/main.e3370c36.css.map",
+    "main.0c97115a.js.map": "/static/js/main.0c97115a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e3370c36.css",
+    "static/js/main.0c97115a.js"
+  ]
+}

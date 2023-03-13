@@ -1,7 +1,6 @@
 .DepartamentsInfo img{
     height: 500px !important;
     width: 100% !important;
-    object-fit: cover;
 }
 .DepartamentsInfo p{
     align-items: center;

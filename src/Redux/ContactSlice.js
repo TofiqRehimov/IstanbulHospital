@@ -23,8 +23,8 @@ const contactSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder.addCase(fecthContactSlice.fulfilled, (state, action) => {
-            // state.data = action.payload;
-            // state.loading = true;
+            state.data = action.payload;
+            state.loading = true;
         })
     }
 })
